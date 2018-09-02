@@ -24,7 +24,7 @@ android 组件化 demo
 ### 10.然后就是onemodule 下的build.gradle文件的修改，这个时候isModule就有用武之地了，插件判断是组件化使用library插件否则用application
 ![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/module_gradle_plugin.png)
 ### 11.其次就是需要注册AndroidManifest.xml在build.gradle中
-![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/module.png)
+![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/module_gradle_sourceset_manifest.png)
 因为之前创建的debug文件夹下是一些测试用的数据所以集成打包的时候删除掉debug文件夹 
 ### 12.其他组件library基本和onemodule配置一样
 ### 13.现在说一下公共组件我命名为Common library module 里面存放一些公共的属性 theme 基类 工具类和依赖库等等一些公共的东西所有组件module和猪app module都依赖此组件 使用其内部的工具
