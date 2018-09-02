@@ -1,7 +1,7 @@
 # AndroidModule
 android 组件化 demo
 # Android组件化配置
-[image:0ABDAC9D-76ED-4B4B-8E51-C8F8BE941353-490-000000C2B3D7216B/937FCAF4-E1A0-49B2-958D-44951654DE46.png]
+![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/module.png)
 由于我这个是已经完成了组件化配置了所以onemodule和twomodule是属于了与app module平级的module文件而不是Android library了,可以看文件夹图标显示,但是第一次创建这几个文件的时候都是创建Android library module.
 
 # tip:组件化即是多个library Module组成
