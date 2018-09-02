@@ -18,7 +18,7 @@ android 组件化 demo
 ### 8.在onemodule组件library中main路径下创建一个文件夹与java 平级永于存放AndroidManifest.xml文件,没有该文件不会生成组件module,必须指定默认启动的Activity 因为是单独的一个组件需要单独运行，必须指定启动Activity
 ![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/module_androidmanifest_structure.png)
 然后AndroidManifest.xml文件中代码如下
-![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/module.png)
+![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/module_androidmanifest_content.png)
 ### 9.在onemodule组件下默认生成的AndroidManifest.xml文件中修改自己的Activity注册 application用统一的风格就行了也可以修改其他风格,但是最终集成的时候需要与主工程风格一致所以保持一致就可以了
 ![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/module.png)
 ### 10.然后就是onemodule 下的build.gradle文件的修改，这个时候isModule就有用武之地了，插件判断是组件化使用library插件否则用application
