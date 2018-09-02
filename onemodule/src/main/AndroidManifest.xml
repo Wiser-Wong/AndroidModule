@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wiser.onemodule" >
+
+    <application android:theme="@style/AppTheme">
+        <activity
+            android:name=".OneModuleActivity"
+            android:screenOrientation="portrait" />
+    </application>
+    
+</manifest>
