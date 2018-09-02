@@ -11,7 +11,7 @@ android 组件化 demo
 ### 4.主工程app也要依赖这个公共的library库
 ### 5.为了区分使用组件还是集成需要进行判断运行,在项目根目录下有gradle.properties文件 可用于存放全局常量,在该文件中定义一个常量isModule=true，是否要使用组件化开发,第一次增加该常量需要构建一下才能生效,每次修改都要Sync Now一下才会生效.
 ### 6.主工程的结构代码不变,只有app module下的build.gradle文件需要声明什么时候依赖组件library module
-[image:https://github.com/Wiser-Wong/AndroidModule/blob/master/images/app_gradle.png]
+![images](https://github.com/Wiser-Wong/AndroidModule/blob/master/images/app_gradle.png)
 ### 7.组件化library module 工程结构需要变化 每一个组件化的library 基本都是一样结构,在onemodule组件中main路径下的Java路径下创建一个文件夹debug与onemodule组件包路径同级
 [image:0A77CF6C-EA27-45E9-8782-0E3D11C73A18-490-00000173BA251B8A/15291233-25E0-4399-B964-E33EBD6B38E6.png]
 用于存放一些假数据公共的测试工具之类的一些不需要最终打集成包用到的类文件.
