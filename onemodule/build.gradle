@@ -1,6 +1,6 @@
-if(isModule.toBoolean()){
+if (!isModule.toBoolean()) {
     apply plugin: 'com.android.library'
-}else{
+} else {
     apply plugin: 'com.android.application'
 }
 
@@ -16,7 +16,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
     }
@@ -30,7 +30,7 @@ android {
 
     sourceSets {
         main {
-            if (isModule.toBoolean()) {
+            if (!isModule.toBoolean()) {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 //集成开发模式下排除debug文件夹中的所有Java文件
                 java {
@@ -47,4 +47,5 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':common')
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
 }

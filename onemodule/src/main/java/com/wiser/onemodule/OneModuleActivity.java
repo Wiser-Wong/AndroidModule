@@ -8,15 +8,15 @@ import com.wiser.library.base.WISERActivity;
 import com.wiser.library.base.WISERBuilder;
 
 @Route(path = "/com/OneModule")
-public class OneModuleActivity extends WISERActivity{
-    @Override
-    protected WISERBuilder build(WISERBuilder wiserBuilder) {
-        wiserBuilder.layoutId(R.layout.activity_one_module);
-        return wiserBuilder;
-    }
+public class OneModuleActivity extends WISERActivity {
 
-    @Override
-    protected void initData(Bundle bundle) {
+	@Override protected WISERBuilder build(WISERBuilder wiserBuilder) {
+		wiserBuilder.layoutId(R.layout.activity_one_module);
+		wiserBuilder.swipeBack(true);
+		return wiserBuilder;
+	}
 
-    }
+	@Override protected void initData(Bundle bundle) {
+
+	}
 }
