@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-@Route(path = "/one/OneModule")
+@Route(path = "/OneModule",group = "one")
 public class OneModuleActivity extends WISERActivity implements View.OnClickListener{
 
 	TextView tvSkip;

@@ -3,11 +3,7 @@ package com.wiser.androidmodule;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.wiser.library.base.WISERActivity;
 import com.wiser.library.base.WISERBuilder;
-import com.wiser.onemodule.OneModuleActivity;
-import com.wiser.twomodule.TwoModuleActivity;
 
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 
@@ -27,7 +23,7 @@ public class MainActivity extends WISERActivity {
 	@OnClick(value = { R.id.btn_one_module, R.id.btn_two_module }) public void onClickView(View view) {
 		switch (view.getId()) {
 			case R.id.btn_one_module:
-				ARouter.getInstance().build("/one/OneModule").navigation();
+				ARouter.getInstance().build("/OneModule","one").navigation();
 				break;
 			case R.id.btn_two_module:
 				ARouter.getInstance().build("/two/TwoModule").navigation();
