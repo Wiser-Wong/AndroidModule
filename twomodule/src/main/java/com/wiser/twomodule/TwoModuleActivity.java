@@ -1,10 +1,12 @@
 package com.wiser.twomodule;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.wiser.library.base.WISERActivity;
 import com.wiser.library.base.WISERBuilder;
 
 import android.os.Bundle;
 
+@Route(path = "/two/TwoModule")
 public class TwoModuleActivity extends WISERActivity {
 
 	@Override protected WISERBuilder build(WISERBuilder wiserBuilder) {
