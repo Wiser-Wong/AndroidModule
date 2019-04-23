@@ -1,10 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wiser.onemodule" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wiser.onemodule">
 
-    <application android:theme="@style/BaseAppTheme">
+    <application
+        android:theme="@style/BaseAppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
             android:name=".OneModuleActivity"
             android:screenOrientation="portrait" />
     </application>
-    
+
 </manifest>

@@ -34,9 +34,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //架构
-    api 'com.github.Wiser-Wong:Frame:1.1.02'
+    api 'com.github.Wiser-Wong:Frame:1.4.0'
     //ARouter路由组件交互
     api 'com.alibaba:arouter-api:1.4.0'
     //控件注册
     api 'com.jakewharton:butterknife:8.8.1'
+    //EventBus
+    api 'org.greenrobot:eventbus:3.1.1'
 }

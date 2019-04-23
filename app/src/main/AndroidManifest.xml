@@ -5,13 +5,12 @@
 
     <application
         android:name="com.wiser.androidmodule.MainApplication"
-        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/BaseAppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:replace="android:name">
         <activity android:name=".MainActivity">
             <intent-filter>
