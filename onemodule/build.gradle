@@ -17,6 +17,7 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
+                includeCompileClasspath = true
             }
         }
     }
@@ -47,8 +48,8 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':common')
-    //路由跳转
-    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+//    //路由跳转
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
     //控件注册
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

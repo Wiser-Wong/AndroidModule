@@ -9,9 +9,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
+                includeCompileClasspath = true
             }
         }
     }
@@ -21,6 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {}
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     sourceSets {}
@@ -33,10 +40,11 @@ dependencies {
     implementation project(':common')
     //控件注册
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    //路由跳转
-    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+//    //路由跳转
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
     if (!isModule.toBoolean()) {
         implementation project(':onemodule')
         implementation project(':twomodule')
     }
+
 }

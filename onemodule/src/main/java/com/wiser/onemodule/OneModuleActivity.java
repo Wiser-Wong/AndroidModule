@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.wiser.library.base.WISERActivity;
 import com.wiser.library.base.WISERBuilder;
+import com.wiser.router.WRouter;
+import com.wiser.router_annotation.Router;
 
-import org.greenrobot.eventbus.EventBus;
-
-@Route(path = "/OneModule", group = "one")
+@Router(path = "onemodule/OneModuleActivity")
 public class OneModuleActivity extends WISERActivity implements View.OnClickListener {
 
     TextView tvSkip;
@@ -33,11 +31,11 @@ public class OneModuleActivity extends WISERActivity implements View.OnClickList
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.tv_skip) {
-            // Intent intent = new Intent();
-            // intent.setClassName(this,"com.wiser.twomodule.TwoModuleActivity");
-            // startActivity(intent);
-            EventBus.getDefault().postSticky("测试EventBus");
-            ARouter.getInstance().build("/two/TwoModule").navigation();
+//            WRouter.create("app/MainActivity").open(this);
+            Intent intent = new Intent();
+            intent.putExtra("key","我回来了");
+            setResult(RESULT_OK,intent);
+            finish();
         }
     }
 }

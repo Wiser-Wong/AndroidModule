@@ -3,11 +3,13 @@
     package="com.wiser.onemodule">
 
     <application
+        android:name=".OneApplication"
         android:theme="@style/BaseAppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
             android:name=".OneModuleActivity"
             android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

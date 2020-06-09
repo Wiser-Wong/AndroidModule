@@ -1,19 +1,14 @@
 package com.wiser.twomodule;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
+import android.content.Intent;
+import android.view.View;
+
 import com.wiser.library.base.WISERActivity;
 import com.wiser.library.base.WISERBuilder;
-import com.wiser.library.helper.WISERHelper;
+import com.wiser.router.WRouter;
+import com.wiser.router_annotation.Router;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
-@Route(path = "/two/TwoModule")
+@Router(path = "twomodule/TwoModuleActivity")
 public class TwoModuleActivity extends WISERActivity {
 
     @Override
@@ -24,20 +19,11 @@ public class TwoModuleActivity extends WISERActivity {
 
     @Override
     protected void initData(Intent intent) {
-        if (!EventBus.getDefault().isRegistered(this))
-            EventBus.getDefault().register(this);
-    }
-
-    // 测试EventBus
-    @Subscribe(sticky = true)
-    public void testEventBus(String s) {
-        WISERHelper.toast().show(s);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (EventBus.getDefault().isRegistered(this))
-            EventBus.getDefault().unregister(this);
+        findViewById(R.id.tv_skip).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                WRouter.create("app/MainActivity").open(TwoModuleActivity.this);
+            }
+        });
     }
 }
