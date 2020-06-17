@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 import com.wiser.library.base.WISERActivity;
 import com.wiser.library.base.WISERBuilder;
-import com.wiser.router.WRouter;
 import com.wiser.router_annotation.Router;
 
 @Router(path = "onemodule/OneModuleActivity")

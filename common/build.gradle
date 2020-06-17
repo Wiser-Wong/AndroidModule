@@ -40,7 +40,7 @@ dependencies {
     api 'com.jakewharton:butterknife:8.8.1'
 
     //WRouter
-    api 'com.github.Wiser-Wong:WRouter:1.1.2'
+    api 'com.github.Wiser-Wong:WRouter:1.1.3'
     //分包
     api 'com.android.support:multidex:1.0.3'
 }
